@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleHub Fashion Store</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#fff5f8;color:#333}
+header{background:linear-gradient(90deg,#ff5f8f,#ff9fbd);color:white;padding:20px;text-align:center;border-bottom:4px solid #e83e72}
+header h1{font-size:35px;letter-spacing:3px;text-shadow:2px 2px 4px #9b3658;animation:title 2s infinite alternate}
+nav{margin-top:15px}nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold}nav a:hover{text-decoration:underline}
+.hero{padding:70px 20px;text-align:center;background:linear-gradient(135deg,#ffe0ea,#fff);border-bottom:2px solid #ff8eae}
+.hero h2{font-size:40px;color:#d6336c;margin-bottom:15px;text-shadow:1px 1px 3px #aaa}.hero p{font-size:18px;margin-bottom:25px}
+.btn{display:inline-block;background:#d6336c;color:white;padding:12px 25px;border-radius:25px;text-decoration:none;transition:.3s}.btn:hover{background:#a61e4d;transform:scale(1.1)}
+.products{padding:35px 8%}.products h2{text-align:center;color:#d6336c;margin-bottom:25px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.card{background:white;padding:15px;text-align:center;border:2px solid #ffc2d5;border-radius:12px;box-shadow:0 4px 10px #ddd;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 8px 18px #bbb}.card img{width:100%;height:220px;object-fit:cover;border-radius:8px}.card h3{color:#d6336c;margin:12px}.card p{margin-bottom:12px}
+footer{background:#333;color:white;text-align:center;padding:20px;margin-top:30px}
+@keyframes title{from{transform:scale(1)}to{transform:scale(1.05)}}
+@media(max-width:700px){.product-grid{grid-template-columns:1fr}.hero h2{font-size:30px}nav a{margin:5px}}
+</style>
+</head>
+<body>
+<header><h1>StyleHub</h1><nav><a href="#">Home</a><a href="#">Women</a><a href="#">Men</a><a href="#">Offers</a><a href="#">Contact</a></nav></header>
+<section class="hero"><h2>Fashion That Defines You</h2><p>Discover the latest styles and trends at amazing prices.</p><a href="#" class="btn">Shop Now</a></section>
+<section class="products"><h2>Featured Collections</h2><div class="product-grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500" alt="Women's Fashion"><h3>Women's Collection</h3><p>Elegant styles for every occasion.</p><a href="#" class="btn">Explore</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=500" alt="Men's Fashion"><h3>Men's Collection</h3><p>Modern looks with classic comfort.</p><a href="#" class="btn">Explore</a></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=500" alt="Fashion Sale"><h3>Special Offers</h3><p>Get amazing fashion deals today.</p><a href="#" class="btn">View Offers</a></div>
+</div></section>
+<footer><p>© 2026 StyleHub Fashion Store | All Rights Reserved</p></footer>
+</body>
+</html>
