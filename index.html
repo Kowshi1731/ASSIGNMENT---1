@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supermarket Billing System</title>
+<style>
+body{font-family:Arial;background:#e8f5e9;text-align:center;padding:30px}.container{width:450px;max-width:90%;margin:auto;background:white;padding:25px;border-radius:12px;box-shadow:0 5px 15px #aaa}
+h1{color:#2e7d32}.product{margin:15px 0;padding:15px;background:#f1f8e9;border-radius:8px}
+input{width:40%;padding:9px;margin:5px;border:1px solid #aaa;border-radius:5px}
+button{padding:12px 25px;background:#2e7d32;color:white;border:none;border-radius:6px;cursor:pointer}button:hover{background:#1b5e20}
+#result{margin-top:20px;padding:15px;background:#e8f5e9;border-radius:8px;display:none}
+</style>
+</head>
+<body>
+<div class="container"><h1>Supermarket Bill</h1><p>Enter quantity and unit price</p>
+<div class="product"><h3>Product 1</h3><input type="number" id="q1" placeholder="Quantity" min="1"><input type="number" id="p1" placeholder="Unit Price" min="0"></div>
+<div class="product"><h3>Product 2</h3><input type="number" id="q2" placeholder="Quantity" min="1"><input type="number" id="p2" placeholder="Unit Price" min="0"></div>
+<div class="product"><h3>Product 3</h3><input type="number" id="q3" placeholder="Quantity" min="1"><input type="number" id="p3" placeholder="Unit Price" min="0"></div>
+<button onclick="generateBill()">Generate Bill</button><div id="result"></div></div>
+<script>
+function generateBill(){
+let q1=Number(document.getElementById("q1").value),p1=Number(document.getElementById("p1").value);
+let q2=Number(document.getElementById("q2").value),p2=Number(document.getElementById("p2").value);
+let q3=Number(document.getElementById("q3").value),p3=Number(document.getElementById("p3").value);
+let amount1=q1*p1,amount2=q2*p2,amount3=q3*p3,total=amount1+amount2+amount3,discount=0;
+if(total>2000)discount=total*0.10;
+let finalAmount=total-discount,result=document.getElementById("result");result.style.display="block";
+result.innerHTML="<h2>Bill Summary</h2>"+"<p>Product 1: ₹"+amount1.toFixed(2)+"</p>"+"<p>Product 2: ₹"+amount2.toFixed(2)+"</p>"+"<p>Product 3: ₹"+amount3.toFixed(2)+"</p>"+"<p><b>Total: ₹"+total.toFixed(2)+"</b></p>"+"<p>Discount: ₹"+discount.toFixed(2)+"</p>"+"<p><b>Final Payable: ₹"+finalAmount.toFixed(2)+"</b></p>";
+}
+</script>
+</body>
+</html>
